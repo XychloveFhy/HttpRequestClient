@@ -1,17 +1,17 @@
 # HttpRequestClient
 
-去年做的一个比较适合于MVVM模式的Http请求框架 摘出来整理整理
+I made it last year for our projects, and it suits MVVM I think
 
-- HRClient: 发起请求 AFNetworking
-- HRModel: 请求参数模型
-- HRResponse: 继承Mantle的模型基类
-- HRError: 错误
+- HRClient: to send a request use AFNetworking/AFHTTPSessionManager
+- HRModel: a model which contains all the parameters used for the request
+- HRResponse: a base Model extends Mantle/MTLModel used to take the request response data
+- HRError: take errors from your server or the session
 
-每个模块做一个HRClient类别负责当前模块请求，当前模块的接口定义在当前分类，避免混乱
-ViewModel负责传递参数发起请求接收返回结果并转成HRResponse模型
-View(VC)展现ViewModel获取的RResponse模型数据
+I use a HRClient category in charge of the current function module, define api here.
+ViewModel used to pass parameters, send request, take response and make it a Model:HRResponse.
+View show the loading , display the response Model.
 
-用法举例:
+Usage:
 ### Model：
 ```objc
 @interface HRUserModel : HRResponse
