@@ -41,21 +41,20 @@
 
 
 @interface HRClient : NSObject
+
 + (instancetype)baseClient;
+
 + (instancetype)otherClient;
+
 @property (nonatomic, readonly) NSString *baseURLString;
+
 @property (nonatomic, readonly) AFHTTPSessionManager *sessionManager;
 
 /**
  by default:{"Accept-Language" = "zh-Hans;q=1";
  "User-Agent" = "HttpRequestClient/1.3.5 (iPhone; iOS 10.3.2; Scale/3.00)";}
- 
- to remove some value for special key, use - [*.manager.requestSerializer setValue:nil forHTTPHeaderField:key];
- 
- setHeaders only insert or replace some value for key because value can not be nil in a NSDictionary
  */
 - (void)setHeaders:(NSDictionary<NSString *,NSString *> *)headers;
-
 
 /**
  start a url session request
