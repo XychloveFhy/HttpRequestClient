@@ -22,11 +22,11 @@ typedef void (^progress)(NSProgress *progress);
 typedef void (^constructingBody)(id <AFMultipartFormData> formData);
 
 @interface HRModel : NSObject
-@property (nonatomic, copy, readonly) NSString *URLString;
-@property (nonatomic, assign, readonly) HttpRequestMethod method;
-@property (nonatomic, copy, readonly) NSDictionary *parameters;
-@property (nonatomic, copy, readonly) constructingBody constructingBody;
-@property (nonatomic, copy, readonly) progress progress;
+@property (nonatomic, readonly) NSString *URLString;
+@property (nonatomic, readonly) HttpRequestMethod method;
+@property (nonatomic, readonly) NSDictionary *parameters;
+@property (nonatomic, readonly) constructingBody constructingBody;
+@property (nonatomic, readonly) progress progress;
 
 + (instancetype)modelWithURLString:(NSString *)string method:(HttpRequestMethod)method parameters:(NSDictionary *)parameters constructingBody:(constructingBody)constructingBody progress:(progress)progress;
 

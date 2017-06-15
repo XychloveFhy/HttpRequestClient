@@ -15,8 +15,8 @@
     [hrm setValue:string forKey:@"URLString"];
     [hrm setValue:@(method) forKey:@"method"];
     [hrm setValue:parameters forKey:@"parameters"];
-    [hrm setValue:constructingBody forKey:@"constructingBody"];
-    [hrm setValue:progress forKey:@"progress"];
+    [hrm setValue:[constructingBody copy] forKey:@"constructingBody"];
+    [hrm setValue:[progress copy] forKey:@"progress"];
     return hrm;
 }
 

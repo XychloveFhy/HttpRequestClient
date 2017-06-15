@@ -18,6 +18,10 @@
 		101806221EF19BF300F7D79B /* HRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806211EF19BF300F7D79B /* HRModel.m */; };
 		101806251EF19DD200F7D79B /* HRResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806241EF19DD200F7D79B /* HRResponse.m */; };
 		101806281EF19F0200F7D79B /* HRError.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806271EF19F0200F7D79B /* HRError.m */; };
+		101806391EF2312B00F7D79B /* HRClient+Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806381EF2312B00F7D79B /* HRClient+Friends.m */; };
+		1018063C1EF231DF00F7D79B /* HRFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018063B1EF231DF00F7D79B /* HRFriendModel.m */; };
+		1018063F1EF231F300F7D79B /* HRFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018063E1EF231F300F7D79B /* HRFriendsController.m */; };
+		101806421EF2320D00F7D79B /* HRFriendsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806411EF2320D00F7D79B /* HRFriendsManager.m */; };
 		B9DBE0B76605551E177CB120 /* libPods-HttpRequestClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAB11808D34A851BEF7482E /* libPods-HttpRequestClient.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,14 @@
 		101806241EF19DD200F7D79B /* HRResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRResponse.m; sourceTree = "<group>"; };
 		101806261EF19F0200F7D79B /* HRError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRError.h; sourceTree = "<group>"; };
 		101806271EF19F0200F7D79B /* HRError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRError.m; sourceTree = "<group>"; };
+		101806371EF2312B00F7D79B /* HRClient+Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HRClient+Friends.h"; sourceTree = "<group>"; };
+		101806381EF2312B00F7D79B /* HRClient+Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HRClient+Friends.m"; sourceTree = "<group>"; };
+		1018063A1EF231DF00F7D79B /* HRFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFriendModel.h; sourceTree = "<group>"; };
+		1018063B1EF231DF00F7D79B /* HRFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFriendModel.m; sourceTree = "<group>"; };
+		1018063D1EF231F300F7D79B /* HRFriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFriendsController.h; sourceTree = "<group>"; };
+		1018063E1EF231F300F7D79B /* HRFriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFriendsController.m; sourceTree = "<group>"; };
+		101806401EF2320D00F7D79B /* HRFriendsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFriendsManager.h; sourceTree = "<group>"; };
+		101806411EF2320D00F7D79B /* HRFriendsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFriendsManager.m; sourceTree = "<group>"; };
 		3D0937C4216B9C3C2A5E79CE /* Pods-HttpRequestClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpRequestClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-HttpRequestClient/Pods-HttpRequestClient.release.xcconfig"; sourceTree = "<group>"; };
 		5CAB11808D34A851BEF7482E /* libPods-HttpRequestClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HttpRequestClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA67546F544D5763F7DAB28E /* Pods-HttpRequestClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpRequestClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HttpRequestClient/Pods-HttpRequestClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,16 +96,9 @@
 				101806031EF176B200F7D79B /* AppDelegate.m */,
 				101806051EF176B200F7D79B /* ViewController.h */,
 				101806061EF176B200F7D79B /* ViewController.m */,
-				101806161EF1799600F7D79B /* HRClient.h */,
-				101806171EF1799600F7D79B /* HRClient.m */,
-				101806191EF17A2800F7D79B /* HRManager.h */,
-				1018061A1EF17A2800F7D79B /* HRManager.m */,
-				101806201EF19BF300F7D79B /* HRModel.h */,
-				101806211EF19BF300F7D79B /* HRModel.m */,
-				101806231EF19DD200F7D79B /* HRResponse.h */,
-				101806241EF19DD200F7D79B /* HRResponse.m */,
-				101806261EF19F0200F7D79B /* HRError.h */,
-				101806271EF19F0200F7D79B /* HRError.m */,
+				101806441EF2468000F7D79B /* Core */,
+				101806431EF2466700F7D79B /* Sample */,
+				1018062A1EF21BA100F7D79B /* Deprecated */,
 				101806081EF176B200F7D79B /* Main.storyboard */,
 				1018060B1EF176B200F7D79B /* Assets.xcassets */,
 				1018060D1EF176B200F7D79B /* LaunchScreen.storyboard */,
@@ -109,6 +114,45 @@
 				101806001EF176B200F7D79B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1018062A1EF21BA100F7D79B /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				101806191EF17A2800F7D79B /* HRManager.h */,
+				1018061A1EF17A2800F7D79B /* HRManager.m */,
+			);
+			name = Deprecated;
+			sourceTree = "<group>";
+		};
+		101806431EF2466700F7D79B /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				101806371EF2312B00F7D79B /* HRClient+Friends.h */,
+				101806381EF2312B00F7D79B /* HRClient+Friends.m */,
+				1018063A1EF231DF00F7D79B /* HRFriendModel.h */,
+				1018063B1EF231DF00F7D79B /* HRFriendModel.m */,
+				1018063D1EF231F300F7D79B /* HRFriendsController.h */,
+				1018063E1EF231F300F7D79B /* HRFriendsController.m */,
+				101806401EF2320D00F7D79B /* HRFriendsManager.h */,
+				101806411EF2320D00F7D79B /* HRFriendsManager.m */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		101806441EF2468000F7D79B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				101806161EF1799600F7D79B /* HRClient.h */,
+				101806171EF1799600F7D79B /* HRClient.m */,
+				101806201EF19BF300F7D79B /* HRModel.h */,
+				101806211EF19BF300F7D79B /* HRModel.m */,
+				101806231EF19DD200F7D79B /* HRResponse.h */,
+				101806241EF19DD200F7D79B /* HRResponse.m */,
+				101806261EF19F0200F7D79B /* HRError.h */,
+				101806271EF19F0200F7D79B /* HRError.m */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		3476B0AFBFFED109F68E5DBC /* Frameworks */ = {
@@ -251,13 +295,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				101806281EF19F0200F7D79B /* HRError.m in Sources */,
+				101806421EF2320D00F7D79B /* HRFriendsManager.m in Sources */,
+				1018063C1EF231DF00F7D79B /* HRFriendModel.m in Sources */,
 				101806071EF176B200F7D79B /* ViewController.m in Sources */,
 				101806251EF19DD200F7D79B /* HRResponse.m in Sources */,
+				101806391EF2312B00F7D79B /* HRClient+Friends.m in Sources */,
 				1018061B1EF17A2800F7D79B /* HRManager.m in Sources */,
 				101806041EF176B200F7D79B /* AppDelegate.m in Sources */,
 				101806221EF19BF300F7D79B /* HRModel.m in Sources */,
 				101806181EF1799600F7D79B /* HRClient.m in Sources */,
 				101806011EF176B200F7D79B /* main.m in Sources */,
+				1018063F1EF231F300F7D79B /* HRFriendsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
