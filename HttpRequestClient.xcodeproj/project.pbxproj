@@ -97,7 +97,7 @@
 				101806051EF176B200F7D79B /* ViewController.h */,
 				101806061EF176B200F7D79B /* ViewController.m */,
 				101806441EF2468000F7D79B /* Core */,
-				101806431EF2466700F7D79B /* Sample */,
+				101806431EF2466700F7D79B /* Demo */,
 				1018062A1EF21BA100F7D79B /* Deprecated */,
 				101806081EF176B200F7D79B /* Main.storyboard */,
 				1018060B1EF176B200F7D79B /* Assets.xcassets */,
@@ -125,19 +125,14 @@
 			name = Deprecated;
 			sourceTree = "<group>";
 		};
-		101806431EF2466700F7D79B /* Sample */ = {
+		101806431EF2466700F7D79B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				101806371EF2312B00F7D79B /* HRClient+Friends.h */,
-				101806381EF2312B00F7D79B /* HRClient+Friends.m */,
-				1018063A1EF231DF00F7D79B /* HRFriendModel.h */,
-				1018063B1EF231DF00F7D79B /* HRFriendModel.m */,
-				1018063D1EF231F300F7D79B /* HRFriendsController.h */,
-				1018063E1EF231F300F7D79B /* HRFriendsController.m */,
-				101806401EF2320D00F7D79B /* HRFriendsManager.h */,
-				101806411EF2320D00F7D79B /* HRFriendsManager.m */,
+				101806531EF2769C00F7D79B /* Model */,
+				101806541EF27EB300F7D79B /* View */,
+				101806551EF27EC400F7D79B /* ViewModel */,
 			);
-			name = Sample;
+			name = Demo;
 			sourceTree = "<group>";
 		};
 		101806441EF2468000F7D79B /* Core */ = {
@@ -153,6 +148,35 @@
 				101806271EF19F0200F7D79B /* HRError.m */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		101806531EF2769C00F7D79B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1018063A1EF231DF00F7D79B /* HRFriendModel.h */,
+				1018063B1EF231DF00F7D79B /* HRFriendModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		101806541EF27EB300F7D79B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1018063D1EF231F300F7D79B /* HRFriendsController.h */,
+				1018063E1EF231F300F7D79B /* HRFriendsController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		101806551EF27EC400F7D79B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				101806371EF2312B00F7D79B /* HRClient+Friends.h */,
+				101806381EF2312B00F7D79B /* HRClient+Friends.m */,
+				101806401EF2320D00F7D79B /* HRFriendsManager.h */,
+				101806411EF2320D00F7D79B /* HRFriendsManager.m */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		3476B0AFBFFED109F68E5DBC /* Frameworks */ = {

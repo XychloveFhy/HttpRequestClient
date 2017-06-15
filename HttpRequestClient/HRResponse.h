@@ -11,10 +11,3 @@
 @interface HRResponse : MTLModel <MTLJSONSerializing>
 
 @end
-
-@interface HRHead : HRResponse
-@property (nonatomic, readonly) NSInteger Ret;
-@property (nonatomic, readonly) NSInteger Code;
-@property (nonatomic, copy, readonly) NSString *Msg;
-@property (nonatomic, copy, readonly) NSString *Token;
-@end

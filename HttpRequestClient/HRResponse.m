@@ -15,12 +15,3 @@
 }
 
 @end
-
-
-@implementation HRHead
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey{
-    return [NSDictionary mtl_identityPropertyMapWithModel:self];
-}
-
-@end
