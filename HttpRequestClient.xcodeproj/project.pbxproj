@@ -182,8 +182,6 @@
 		101806551EF27EC400F7D79B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1018065C1EF2BB0E00F7D79B /* HRClient+User.h */,
-				1018065D1EF2BB0E00F7D79B /* HRClient+User.m */,
 				1018065F1EF2BB2200F7D79B /* HRUserManager.h */,
 				101806601EF2BB2200F7D79B /* HRUserManager.m */,
 			);
@@ -193,6 +191,7 @@
 		101806621EF2CA3500F7D79B /* User */ = {
 			isa = PBXGroup;
 			children = (
+				10E0F1A41EF5305800AFBF72 /* Utils */,
 				101806531EF2769C00F7D79B /* Model */,
 				101806541EF27EB300F7D79B /* View */,
 				101806551EF27EC400F7D79B /* ViewModel */,
@@ -237,6 +236,15 @@
 				101806411EF2320D00F7D79B /* HRFriendsManager.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		10E0F1A41EF5305800AFBF72 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1018065C1EF2BB0E00F7D79B /* HRClient+User.h */,
+				1018065D1EF2BB0E00F7D79B /* HRClient+User.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		3476B0AFBFFED109F68E5DBC /* Frameworks */ = {

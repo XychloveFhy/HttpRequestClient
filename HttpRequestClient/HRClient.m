@@ -10,6 +10,7 @@
 
 @interface HRClient ()
 @property (nonatomic, strong, readwrite) AFHTTPSessionManager *sessionManager;
+@property (nonatomic, copy) NSDictionary *(^requiredParameters)();
 @end
 
 static HRClient *baseClient = nil;
@@ -25,9 +26,12 @@ static HRClient *otherClient = nil;
         /**
          `AFJSONRequestSerializer` is a subclass of `AFHTTPRequestSerializer` that encodes parameters as JSON using `NSJSONSerialization`, setting the `Content-Type` of the encoded request to `application/json`.
          */
-        baseClient.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];;
-        baseClient.headers = @{@"secret": @"af2ab55f5cfe4c269a7b726e7f3fdef9"};
+        baseClient.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         baseClient.sessionManager.requestSerializer.timeoutInterval = 15;
+        baseClient.headers = @{@"secret": @"af2ab55f5cfe4c269a7b726e7f3fdef9"};
+        baseClient.requiredParameters = ^NSDictionary *{
+            return @{@"token": [self getToken]};
+        };
     });
     return baseClient;
 }
@@ -37,12 +41,23 @@ static HRClient *otherClient = nil;
     dispatch_once(&onceToken, ^{
         otherClient = [[self alloc] init];
         otherClient.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:otherUrl]];
-        otherClient.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];;
-        otherClient.headers = @{@"secret": @"1d2ab55f5cfe4c269a7b726e7f3fdef9"};
+        otherClient.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
         otherClient.sessionManager.requestSerializer.timeoutInterval = 15;
+        otherClient.headers = @{@"secret": @"1d2ab55f5cfe4c269a7b726e7f3fdef9"};
+        otherClient.requiredParameters = ^NSDictionary *{
+            return @{@"other": @"something"};
+        };
     });
     return otherClient;
 }
+
+#pragma mark - Utils
+
++ (NSString *)getToken{
+    return @"2333";
+}
+
+#pragma mark -
 
 - (void)setHeaders:(NSDictionary<NSString *,NSString *> *)headers{
     [headers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
@@ -71,10 +86,10 @@ static HRClient *otherClient = nil;
 - (NSURLSessionDataTask *)requestWithModel:(HRModel *)model success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, HRError *))failure{
     
     /*
-     假设返回数据是这样的格式
+     assume returned json data like this
      {
      "code": 10000,
-     "msg": "接口调用成功"
+     "msg": "login success"
      "data":{
             "Name": "",
             "Token": "b1da5ca7-fd61-4537-9361-92163d9e43d8",
@@ -95,7 +110,7 @@ static HRClient *otherClient = nil;
      */
     void (^serverResponse)(NSURLSessionDataTask *task, id responseObject) = ^(NSURLSessionDataTask *task, id responseObject){
         /**
-         code == 0 成功
+         code == 0 means success
          */
         NSInteger code = [responseObject[@"code"] integerValue];
         if (code == 0) {
@@ -125,12 +140,8 @@ static HRClient *otherClient = nil;
     };
     
     
-    //MARK: 默认参数
-    NSDictionary *defaultParas = @{@"AppVersion": @"1.0.0",
-                                   @"AppType": @(2),
-                                   @"ApiType":@(1),
-                                   @"Token": @"3403980-fmsod23-32f-32-2fs"};
-    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:defaultParas];
+    //MARK: required/default parameters append model.parameters
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:self.requiredParameters()];
     [parameters addEntriesFromDictionary:model.parameters];
     
     //MARK: - Request
