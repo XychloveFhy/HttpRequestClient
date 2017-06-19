@@ -9,6 +9,7 @@
 #import "HRResponse.h"
 
 @interface HRGirlFriendModel : HRResponse
+@property (nonatomic, copy) NSString *url;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) NSInteger age;
 @property (nonatomic, copy) NSString *sanwei;

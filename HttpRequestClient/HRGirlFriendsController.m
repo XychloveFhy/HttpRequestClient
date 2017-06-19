@@ -10,6 +10,7 @@
 #import "HRGirlFriendsManager.h"
 #import <MBProgressHUD.h>
 #import "HRUtils.h"
+#import <UIImageView+WebCache.h>
 
 @interface HRGirlFriendsController ()
 @property (nonatomic, strong) HRGirlFriendsManager *manager;
@@ -61,6 +62,7 @@ static NSString * const identifier = @"Cell";
     NSString *string = [NSString stringWithFormat:@"Name:%@ Age:%ld B/W/H:%@", model.name, model.age, model.sanwei];
     cell.textLabel.text = string;
     cell.textLabel.numberOfLines = 0;
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.url]];
     // Configure the cell...
     return cell;
 }
