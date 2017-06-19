@@ -17,10 +17,10 @@
 //release
 
 //MARK: Configure the environment
-#define adhoc
+#define debug
 
 #ifdef debug
-    static NSString * const baseUrl = @"http://10.40.5.30:8000";
+    static NSString * const baseUrl = @"http://10.40.4.223:80";
     static NSString * const otherUrl = @"http://10.40.5.30:8000";
 #endif
 

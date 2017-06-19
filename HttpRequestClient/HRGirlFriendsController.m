@@ -1,21 +1,22 @@
 //
-//  HRUserController.m
+//  HRGirlFriendsController.m
 //  HttpRequestClient
 //
 //  Created by 张雁军 on 15/06/2017.
 //  Copyright © 2017 张雁军. All rights reserved.
 //
 
-#import "HRUserController.h"
-#import "HRUserManager.h"
+#import "HRGirlFriendsController.h"
+#import "HRGirlFriendsManager.h"
 #import <MBProgressHUD.h>
+#import "HRUtils.h"
 
-@interface HRUserController ()
-@property (nonatomic, strong) HRUserManager *manager;
+@interface HRGirlFriendsController ()
+@property (nonatomic, strong) HRGirlFriendsManager *manager;
 @end
 
 static NSString * const identifier = @"Cell";
-@implementation HRUserController
+@implementation HRGirlFriendsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,15 +26,16 @@ static NSString * const identifier = @"Cell";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = @"No.2333's Girlfriends";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
-    _manager = [[HRUserManager alloc] initWithUserId:_userId];
+    self.tableView.rowHeight = 90;
+    _manager = [[HRGirlFriendsManager alloc] initWithUserId:_userId];
     [self getUserDetail];
 }
 
 - (void)getUserDetail{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [_manager getUserWithSuccess:^(HRUserModel *model) {
-        self.navigationItem.title = _manager.user.name;
+    [_manager getGirlFriendsWithSuccess:^{
         [self.tableView reloadData];
         [hud hideAnimated:YES];
     } failure:^(HRError *error) {
@@ -50,14 +52,16 @@ static NSString * const identifier = @"Cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _manager.user.hobbies.count;
+    return _manager.girlfriends.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    cell.textLabel.text = _manager.user.hobbies[indexPath.row];
+    HRGirlFriendModel *model = _manager.girlfriends[indexPath.row];
+    NSString *string = [NSString stringWithFormat:@"Name:%@ Age:%ld B/W/H:%@", model.name, model.age, model.sanwei];
+    cell.textLabel.text = string;
+    cell.textLabel.numberOfLines = 0;
     // Configure the cell...
-    
     return cell;
 }
 

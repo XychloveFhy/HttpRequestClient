@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HRGirlFriendsController.h"
 
 @interface ViewController ()
 
@@ -17,8 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"Programmer No.2333";
+    self.navigationItem.rightBarButtonItem.title = @"His Girlfriends";
 }
 
+- (IBAction)showGirlFriends:(id)sender {
+    HRGirlFriendsController *vc = [[HRGirlFriendsController alloc] init];
+    vc.userId = @"666";
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -24,8 +24,6 @@ static HRClient *otherClient = nil;
     dispatch_once(&onceToken, ^{
         baseClient = [[self alloc] init];
         baseClient.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
-//        self.requestSerializer = [AFHTTPRequestSerializer serializer];
-//        self.responseSerializer = [AFJSONResponseSerializer serializer];
 
         /**
          `AFJSONRequestSerializer` is a subclass of `AFHTTPRequestSerializer` that encodes parameters as JSON using `NSJSONSerialization`, setting the `Content-Type` of the encoded request to `application/json`.
@@ -109,10 +107,10 @@ static HRClient *otherClient = nil;
      */
     void (^serverResponse)(NSURLSessionDataTask *task, id responseObject) = ^(NSURLSessionDataTask *task, id responseObject){
         /**
-         code == 0 means success
+         code == 200 means success
          */
         NSInteger code = [responseObject[@"code"] integerValue];
-        if (code == 0) {
+        if (code == 200) {
             id data = responseObject[@"data"];
             success(task, data);
         }else{

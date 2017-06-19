@@ -1,5 +1,5 @@
 //
-//  HRUserModel.h
+//  HRGirlFriendModel.h
 //  HttpRequestClient
 //
 //  Created by 张雁军 on 15/06/2017.
@@ -8,7 +8,8 @@
 
 #import "HRResponse.h"
 
-@interface HRUserModel : HRResponse
+@interface HRGirlFriendModel : HRResponse
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSArray <NSString *> *hobbies;
+@property (nonatomic) NSInteger age;
+@property (nonatomic, copy) NSString *sanwei;
 @end
