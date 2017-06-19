@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1017D5FD1EF7A5F500A0C356 /* UIAlertView+Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017D5FC1EF7A5F500A0C356 /* UIAlertView+Handler.m */; };
+		1017D6011EF7AEA600A0C356 /* UIAlertController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017D6001EF7AEA600A0C356 /* UIAlertController+Helper.m */; };
+		1017D6031EF7B37800A0C356 /* UIAlertController_ hierarchy.png in Resources */ = {isa = PBXBuildFile; fileRef = 1017D6021EF7B37800A0C356 /* UIAlertController_ hierarchy.png */; };
+		1017D6061EF7B54000A0C356 /* HRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1017D6051EF7B54000A0C356 /* HRUtils.m */; };
 		101806011EF176B200F7D79B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806001EF176B200F7D79B /* main.m */; };
 		101806041EF176B200F7D79B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806031EF176B200F7D79B /* AppDelegate.m */; };
 		101806071EF176B200F7D79B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806061EF176B200F7D79B /* ViewController.m */; };
@@ -30,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1017D5FB1EF7A5F500A0C356 /* UIAlertView+Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Handler.h"; sourceTree = "<group>"; };
+		1017D5FC1EF7A5F500A0C356 /* UIAlertView+Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Handler.m"; sourceTree = "<group>"; };
+		1017D5FF1EF7AEA600A0C356 /* UIAlertController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helper.h"; sourceTree = "<group>"; };
+		1017D6001EF7AEA600A0C356 /* UIAlertController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helper.m"; sourceTree = "<group>"; };
+		1017D6021EF7B37800A0C356 /* UIAlertController_ hierarchy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIAlertController_ hierarchy.png"; sourceTree = "<group>"; };
+		1017D6041EF7B54000A0C356 /* HRUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRUtils.h; sourceTree = "<group>"; };
+		1017D6051EF7B54000A0C356 /* HRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRUtils.m; sourceTree = "<group>"; };
 		101805FC1EF176B200F7D79B /* HttpRequestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HttpRequestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101806001EF176B200F7D79B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		101806021EF176B200F7D79B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1017D5FE1EF7A6D700A0C356 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1017D5FB1EF7A5F500A0C356 /* UIAlertView+Handler.h */,
+				1017D5FC1EF7A5F500A0C356 /* UIAlertView+Handler.m */,
+				1017D5FF1EF7AEA600A0C356 /* UIAlertController+Helper.h */,
+				1017D6001EF7AEA600A0C356 /* UIAlertController+Helper.m */,
+				1017D6021EF7B37800A0C356 /* UIAlertController_ hierarchy.png */,
+				1017D6041EF7B54000A0C356 /* HRUtils.h */,
+				1017D6051EF7B54000A0C356 /* HRUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		101805F31EF176B200F7D79B = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +133,7 @@
 				101806031EF176B200F7D79B /* AppDelegate.m */,
 				101806051EF176B200F7D79B /* ViewController.h */,
 				101806061EF176B200F7D79B /* ViewController.m */,
+				1017D5FE1EF7A6D700A0C356 /* Utils */,
 				101806441EF2468000F7D79B /* Core */,
 				101806431EF2466700F7D79B /* Demo */,
 				1018062A1EF21BA100F7D79B /* Deprecated */,
@@ -327,6 +353,7 @@
 			files = (
 				1018060F1EF176B200F7D79B /* LaunchScreen.storyboard in Resources */,
 				1018060C1EF176B200F7D79B /* Assets.xcassets in Resources */,
+				1017D6031EF7B37800A0C356 /* UIAlertController_ hierarchy.png in Resources */,
 				1018060A1EF176B200F7D79B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				101806281EF19F0200F7D79B /* HRError.m in Sources */,
+				1017D5FD1EF7A5F500A0C356 /* UIAlertView+Handler.m in Sources */,
 				1018065E1EF2BB0E00F7D79B /* HRClient+User.m in Sources */,
+				1017D6061EF7B54000A0C356 /* HRUtils.m in Sources */,
 				101806421EF2320D00F7D79B /* HRFriendsManager.m in Sources */,
 				1018063C1EF231DF00F7D79B /* HRFriendModel.m in Sources */,
 				101806071EF176B200F7D79B /* ViewController.m in Sources */,
@@ -395,6 +424,7 @@
 				101806391EF2312B00F7D79B /* HRClient+Friends.m in Sources */,
 				1018061B1EF17A2800F7D79B /* HRManager.m in Sources */,
 				101806041EF176B200F7D79B /* AppDelegate.m in Sources */,
+				1017D6011EF7AEA600A0C356 /* UIAlertController+Helper.m in Sources */,
 				101806221EF19BF300F7D79B /* HRModel.m in Sources */,
 				101806181EF1799600F7D79B /* HRClient.m in Sources */,
 				101806011EF176B200F7D79B /* main.m in Sources */,
@@ -525,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HttpRequestClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.HttpRequestClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HttpRequestClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.HttpRequestClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";

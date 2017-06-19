@@ -7,6 +7,7 @@
 //
 
 #import "HRClient.h"
+#import "HRUtils.h"
 
 @interface HRClient ()
 @property (nonatomic, strong, readwrite) AFHTTPSessionManager *sessionManager;
@@ -23,6 +24,9 @@ static HRClient *otherClient = nil;
     dispatch_once(&onceToken, ^{
         baseClient = [[self alloc] init];
         baseClient.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
+//        self.requestSerializer = [AFHTTPRequestSerializer serializer];
+//        self.responseSerializer = [AFJSONResponseSerializer serializer];
+
         /**
          `AFJSONRequestSerializer` is a subclass of `AFHTTPRequestSerializer` that encodes parameters as JSON using `NSJSONSerialization`, setting the `Content-Type` of the encoded request to `application/json`.
          */
@@ -30,7 +34,7 @@ static HRClient *otherClient = nil;
         baseClient.sessionManager.requestSerializer.timeoutInterval = 15;
         baseClient.headers = @{@"secret": @"af2ab55f5cfe4c269a7b726e7f3fdef9"};
         baseClient.requiredParameters = ^NSDictionary *{
-            return @{@"token": [self getToken]};
+            return @{@"token": [HRUtils getToken]};
         };
     });
     return baseClient;
@@ -49,12 +53,6 @@ static HRClient *otherClient = nil;
         };
     });
     return otherClient;
-}
-
-#pragma mark - Utils
-
-+ (NSString *)getToken{
-    return @"2333";
 }
 
 #pragma mark -
@@ -80,6 +78,7 @@ static HRClient *otherClient = nil;
 }
 
 - (NSString *)baseURLString{
+//    Also important to note is that a trailing slash will be added to any `baseURL` without one. This would otherwise cause unexpected behavior when constructing URLs using paths without a leading slash.
     return _sessionManager.baseURL.absoluteString;
 }
 
