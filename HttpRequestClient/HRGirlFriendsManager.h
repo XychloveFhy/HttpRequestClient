@@ -15,4 +15,7 @@
 @property (nonatomic, readonly) NSString *userId;
 @property (nonatomic, readonly) NSArray <HRGirlFriendModel *> *girlfriends;
 - (void)getGirlFriendsWithSuccess:(void (^)())success failure:(void (^)(HRError *error))failure;
+
+@property (nonatomic, strong) UIImage *girl;
+- (void)uploadGirlProgress:(Progress)progress success:(void (^)(NSDictionary *girl))success failure:(void (^)(HRError *error))failure;
 @end

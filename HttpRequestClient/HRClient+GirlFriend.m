@@ -17,4 +17,14 @@
         failure(error);
     }];
 }
+
+- (void)uploadImageWithParameters:(NSDictionary *)paras constructingBody:(ConstructingBody)constructingBody progress:(Progress)progress success:(void (^)(id))success failure:(void (^)(HRError *))failure{
+    HRModel *model = [HRModel modelWithURLString:uploadImageApi method:POST parameters:paras constructingBody:constructingBody progress:progress];
+    [self requestWithModel:model success:^(NSURLSessionDataTask *task, id data) {
+        success(data);
+    } failure:^(NSURLSessionDataTask *task, HRError *error) {
+        failure(error);
+    }];
+}
+
 @end

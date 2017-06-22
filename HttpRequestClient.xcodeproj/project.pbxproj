@@ -18,7 +18,6 @@
 		1018060C1EF176B200F7D79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1018060B1EF176B200F7D79B /* Assets.xcassets */; };
 		1018060F1EF176B200F7D79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1018060D1EF176B200F7D79B /* LaunchScreen.storyboard */; };
 		101806181EF1799600F7D79B /* HRClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806171EF1799600F7D79B /* HRClient.m */; };
-		1018061B1EF17A2800F7D79B /* HRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018061A1EF17A2800F7D79B /* HRManager.m */; };
 		101806221EF19BF300F7D79B /* HRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806211EF19BF300F7D79B /* HRModel.m */; };
 		101806251EF19DD200F7D79B /* HRResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806241EF19DD200F7D79B /* HRResponse.m */; };
 		101806281EF19F0200F7D79B /* HRError.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806271EF19F0200F7D79B /* HRError.m */; };
@@ -30,6 +29,8 @@
 		1018065B1EF2BAF900F7D79B /* HRGirlFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018065A1EF2BAF900F7D79B /* HRGirlFriendModel.m */; };
 		1018065E1EF2BB0E00F7D79B /* HRClient+GirlFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018065D1EF2BB0E00F7D79B /* HRClient+GirlFriend.m */; };
 		101806611EF2BB2200F7D79B /* HRGirlFriendsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806601EF2BB2200F7D79B /* HRGirlFriendsManager.m */; };
+		10902BD71EFB9141008C2816 /* girl0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10902BD61EFB9141008C2816 /* girl0.jpg */; };
+		10902BDE1EFBA0E5008C2816 /* HRGirlFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10902BDD1EFBA0E5008C2816 /* HRGirlFriendCell.m */; };
 		B9DBE0B76605551E177CB120 /* libPods-HttpRequestClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAB11808D34A851BEF7482E /* libPods-HttpRequestClient.a */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +54,6 @@
 		101806101EF176B200F7D79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101806161EF1799600F7D79B /* HRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRClient.h; sourceTree = "<group>"; };
 		101806171EF1799600F7D79B /* HRClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRClient.m; sourceTree = "<group>"; };
-		101806191EF17A2800F7D79B /* HRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRManager.h; sourceTree = "<group>"; };
-		1018061A1EF17A2800F7D79B /* HRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRManager.m; sourceTree = "<group>"; };
 		101806201EF19BF300F7D79B /* HRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRModel.h; sourceTree = "<group>"; };
 		101806211EF19BF300F7D79B /* HRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRModel.m; sourceTree = "<group>"; };
 		101806231EF19DD200F7D79B /* HRResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRResponse.h; sourceTree = "<group>"; };
@@ -77,6 +76,9 @@
 		1018065D1EF2BB0E00F7D79B /* HRClient+GirlFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HRClient+GirlFriend.m"; sourceTree = "<group>"; };
 		1018065F1EF2BB2200F7D79B /* HRGirlFriendsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlFriendsManager.h; sourceTree = "<group>"; };
 		101806601EF2BB2200F7D79B /* HRGirlFriendsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlFriendsManager.m; sourceTree = "<group>"; };
+		10902BD61EFB9141008C2816 /* girl0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl0.jpg; sourceTree = "<group>"; };
+		10902BDC1EFBA0E5008C2816 /* HRGirlFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlFriendCell.h; sourceTree = "<group>"; };
+		10902BDD1EFBA0E5008C2816 /* HRGirlFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlFriendCell.m; sourceTree = "<group>"; };
 		3D0937C4216B9C3C2A5E79CE /* Pods-HttpRequestClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpRequestClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-HttpRequestClient/Pods-HttpRequestClient.release.xcconfig"; sourceTree = "<group>"; };
 		5CAB11808D34A851BEF7482E /* libPods-HttpRequestClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HttpRequestClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA67546F544D5763F7DAB28E /* Pods-HttpRequestClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpRequestClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HttpRequestClient/Pods-HttpRequestClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,7 +138,6 @@
 				1017D5FE1EF7A6D700A0C356 /* Utils */,
 				101806441EF2468000F7D79B /* Core */,
 				101806431EF2466700F7D79B /* Demo */,
-				1018062A1EF21BA100F7D79B /* Deprecated */,
 				101806081EF176B200F7D79B /* Main.storyboard */,
 				1018060B1EF176B200F7D79B /* Assets.xcassets */,
 				1018060D1EF176B200F7D79B /* LaunchScreen.storyboard */,
@@ -154,18 +155,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1018062A1EF21BA100F7D79B /* Deprecated */ = {
-			isa = PBXGroup;
-			children = (
-				101806191EF17A2800F7D79B /* HRManager.h */,
-				1018061A1EF17A2800F7D79B /* HRManager.m */,
-			);
-			name = Deprecated;
-			sourceTree = "<group>";
-		};
 		101806431EF2466700F7D79B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				10902BD61EFB9141008C2816 /* girl0.jpg */,
 				101806621EF2CA3500F7D79B /* Girlfriends */,
 				101806631EF2CA7900F7D79B /* Friends */,
 			);
@@ -201,6 +194,8 @@
 			children = (
 				101806561EF2BAE700F7D79B /* HRGirlFriendsController.h */,
 				101806571EF2BAE700F7D79B /* HRGirlFriendsController.m */,
+				10902BDC1EFBA0E5008C2816 /* HRGirlFriendCell.h */,
+				10902BDD1EFBA0E5008C2816 /* HRGirlFriendCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -353,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1018060F1EF176B200F7D79B /* LaunchScreen.storyboard in Resources */,
+				10902BD71EFB9141008C2816 /* girl0.jpg in Resources */,
 				1018060C1EF176B200F7D79B /* Assets.xcassets in Resources */,
 				1017D6031EF7B37800A0C356 /* UIAlertController_ hierarchy.png in Resources */,
 				1018060A1EF176B200F7D79B /* Main.storyboard in Resources */,
@@ -423,10 +419,10 @@
 				101806071EF176B200F7D79B /* ViewController.m in Sources */,
 				101806251EF19DD200F7D79B /* HRResponse.m in Sources */,
 				101806391EF2312B00F7D79B /* HRClient+Friends.m in Sources */,
-				1018061B1EF17A2800F7D79B /* HRManager.m in Sources */,
 				101806041EF176B200F7D79B /* AppDelegate.m in Sources */,
 				1017D6011EF7AEA600A0C356 /* UIAlertController+Helper.m in Sources */,
 				101806221EF19BF300F7D79B /* HRModel.m in Sources */,
+				10902BDE1EFBA0E5008C2816 /* HRGirlFriendCell.m in Sources */,
 				101806181EF1799600F7D79B /* HRClient.m in Sources */,
 				101806011EF176B200F7D79B /* main.m in Sources */,
 				1018063F1EF231F300F7D79B /* HRFriendsController.m in Sources */,

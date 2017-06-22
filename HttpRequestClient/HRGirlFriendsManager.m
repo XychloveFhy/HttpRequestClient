@@ -28,4 +28,15 @@
     }];
 }
 
+- (void)uploadGirlProgress:(Progress)progress success:(void (^)(NSDictionary *))success failure:(void (^)(HRError *))failure{
+    [[HRClient baseClient] uploadImageWithParameters:nil constructingBody:^(id<AFMultipartFormData> formData) {
+        NSData *data = UIImageJPEGRepresentation(self.girl, 1);
+        [formData appendPartWithFileData:data name:@"file" fileName:@"C.jpg" mimeType:@"image/jpeg"];
+    } progress:progress success:^(id data) {
+        success(data);
+    } failure:^(HRError *error) {
+        failure(error);
+    }];
+}
+
 @end

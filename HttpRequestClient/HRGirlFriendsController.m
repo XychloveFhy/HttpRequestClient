@@ -11,6 +11,7 @@
 #import <MBProgressHUD.h>
 #import "HRUtils.h"
 #import <UIImageView+WebCache.h>
+#import "HRGirlFriendCell.h"
 
 @interface HRGirlFriendsController ()
 @property (nonatomic, strong) HRGirlFriendsManager *manager;
@@ -27,8 +28,9 @@ static NSString * const identifier = @"Cell";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = @"No.2333's Girlfriends";
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
+    self.navigationItem.title = @"Detail";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Upload Girl" style:0 target:self action:@selector(uploadAvatar)];
+    [self.tableView registerClass:[HRGirlFriendCell class] forCellReuseIdentifier:identifier];
     self.tableView.rowHeight = 90;
     _manager = [[HRGirlFriendsManager alloc] initWithUserId:_userId];
     [self getUserDetail];
@@ -46,6 +48,38 @@ static NSString * const identifier = @"Cell";
     }];
 }
 
+- (void)uploadAvatar{
+    UIImageView *imageview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"girl0.jpg"]];
+    imageview.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width/250 *190.5);
+    imageview.contentMode = UIViewContentModeScaleAspectFill;
+    imageview.clipsToBounds = YES;
+    UIViewController *pickImageController = [[UIViewController alloc] init];
+    pickImageController.view.backgroundColor = [UIColor whiteColor];
+    [pickImageController.view addSubview:imageview];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [pickImageController dismissViewControllerAnimated:YES completion:^{
+            _manager.girl = [UIImage imageNamed:@"girl0.jpg"];
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.mode = MBProgressHUDModeDeterminate;
+            [_manager uploadGirlProgress:^(NSProgress *progress) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    hud.progress = progress.fractionCompleted;
+                });
+            } success:^(NSDictionary *girl) {
+                self.tableView.tableHeaderView = imageview;
+                hud.mode = MBProgressHUDModeText;
+                hud.detailsLabel.text = @"success";
+                [hud hideAnimated:YES afterDelay:1.8];
+            } failure:^(HRError *error) {
+                hud.mode = MBProgressHUDModeText;
+                hud.detailsLabel.text = error.message;
+                [hud hideAnimated:YES afterDelay:1.8];
+            }];
+        }];
+    });
+    [self presentViewController:pickImageController animated:YES completion:nil];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -57,14 +91,21 @@ static NSString * const identifier = @"Cell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    HRGirlFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     HRGirlFriendModel *model = _manager.girlfriends[indexPath.row];
-    NSString *string = [NSString stringWithFormat:@"Name:%@ Age:%ld B/W/H:%@", model.name, model.age, model.sanwei];
-    cell.textLabel.text = string;
-    cell.textLabel.numberOfLines = 0;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.url]];
+    NSString *string = [NSString stringWithFormat:@"Name:%@  Age:%ld  B/W/H:%@", model.name, model.age, model.sanwei];
+    cell.detailTextLabel.text = string;
+    cell.detailTextLabel.numberOfLines = 0;
+    [cell.avatar sd_setImageWithURL:[NSURL URLWithString:model.url]];
+
     // Configure the cell...
     return cell;
+}
+
+#pragma mark - 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
