@@ -1,5 +1,7 @@
 # HttpRequestClient
 
+for more information, please refer to [简书链接](http://www.jianshu.com/p/e6e2a6e8855e)
+
 I made it last year for our projects, and it suits MVVM I think
 
 - HRClient: to send a request use AFNetworking/AFHTTPSessionManager
