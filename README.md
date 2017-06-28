@@ -154,8 +154,6 @@ HRGirlFriendModel 女朋友的模型，HRResponse继承自Mantle
 English: still working ...
 -----------------
 
-I made it last year for our projects, and it suits MVVM I think
-
 - HRClient: to send a request use AFNetworking/AFHTTPSessionManager
 - HRModel: a model which contains all the parameters used for the request
 - HRResponse: a base Model extends Mantle/MTLModel used to take the request response data
