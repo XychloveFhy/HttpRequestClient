@@ -1,24 +1,24 @@
 //
-//  HRGirlFriendsController.m
+//  HRGirlfriendsController.m
 //  HttpRequestClient
 //
 //  Created by 张雁军 on 15/06/2017.
 //  Copyright © 2017 张雁军. All rights reserved.
 //
 
-#import "HRGirlFriendsController.h"
-#import "HRGirlFriendsManager.h"
+#import "HRGirlfriendsController.h"
+#import "HRGirlfriendManager.h"
 #import <MBProgressHUD.h>
 #import "HRUtils.h"
 #import <UIImageView+WebCache.h>
-#import "HRGirlFriendCell.h"
+#import "HRGirlfriendCell.h"
 
-@interface HRGirlFriendsController ()
-@property (nonatomic, strong) HRGirlFriendsManager *manager;
+@interface HRGirlfriendsController ()
+@property (nonatomic, strong) HRGirlfriendManager *manager;
 @end
 
 static NSString * const identifier = @"Cell";
-@implementation HRGirlFriendsController
+@implementation HRGirlfriendsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,9 +30,9 @@ static NSString * const identifier = @"Cell";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"Detail";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Upload Girl" style:0 target:self action:@selector(uploadAvatar)];
-    [self.tableView registerClass:[HRGirlFriendCell class] forCellReuseIdentifier:identifier];
+    [self.tableView registerClass:[HRGirlfriendCell class] forCellReuseIdentifier:identifier];
     self.tableView.rowHeight = 90;
-    _manager = [[HRGirlFriendsManager alloc] initWithUserId:_userId];
+    _manager = [[HRGirlfriendManager alloc] initWithUserId:_userId];
     [self getUserDetail];
 }
 
@@ -91,8 +91,8 @@ static NSString * const identifier = @"Cell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HRGirlFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    HRGirlFriendModel *model = _manager.girlfriends[indexPath.row];
+    HRGirlfriendCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    HRGirlfriend *model = _manager.girlfriends[indexPath.row];
     NSString *string = [NSString stringWithFormat:@"Name:%@  Age:%ld  B/W/H:%@", model.name, model.age, model.sanwei];
     cell.detailTextLabel.text = string;
     cell.detailTextLabel.numberOfLines = 0;

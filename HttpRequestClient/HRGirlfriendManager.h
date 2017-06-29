@@ -1,5 +1,5 @@
 //
-//  HRGirlFriendsManager.h
+//  HRGirlfriendManager.h
 //  HttpRequestClient
 //
 //  Created by 张雁军 on 15/06/2017.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HRGirlFriendModel.h"
-#import "HRClient+GirlFriend.h"
+#import "HRGirlfriend.h"
+#import "HRManager+Girlfriend.h"
 
-@interface HRGirlFriendsManager : NSObject
+@interface HRGirlfriendManager : NSObject
 - (instancetype)initWithUserId:(NSString *)userId;
 @property (nonatomic, readonly) NSString *userId;
-@property (nonatomic, readonly) NSArray <HRGirlFriendModel *> *girlfriends;
+@property (nonatomic, readonly) NSArray <HRGirlfriend *> *girlfriends;
 - (void)getGirlFriendsWithSuccess:(void (^)())success failure:(void (^)(HRError *error))failure;
 
 @property (nonatomic, strong) UIImage *girl;

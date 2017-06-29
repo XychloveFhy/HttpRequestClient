@@ -1,5 +1,5 @@
 //
-//  HRFriendsController.h
+//  HRGirlfriendsController.h
 //  HttpRequestClient
 //
 //  Created by 张雁军 on 15/06/2017.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HRFriendsController : UITableViewController
-
+@interface HRGirlfriendsController : UITableViewController
+@property (nonatomic, copy) NSString *userId;
 @end

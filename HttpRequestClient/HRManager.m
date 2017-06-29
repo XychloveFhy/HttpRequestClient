@@ -1,56 +1,54 @@
 //
-//  HRClient.m
+//  HRManager.m
 //  HttpRequestClient
 //
-//  Created by 张雁军 on 14/06/2017.
+//  Created by 张雁军 on 29/06/2017.
 //  Copyright © 2017 张雁军. All rights reserved.
 //
 
-#import "HRClient.h"
-#import "HRUtils.h"
+#import "HRManager.h"
 
-@interface HRClient ()
+@interface HRManager ()
 @property (nonatomic, strong, readwrite) AFHTTPSessionManager *sessionManager;
 @property (nonatomic, copy) NSDictionary *(^requiredParameters)();
 @end
 
-static HRClient *baseClient = nil;
-static HRClient *otherClient = nil;
+@implementation HRManager
 
-@implementation HRClient
-
-+ (instancetype)baseClient{
++ (instancetype)defaultManager{
+    static HRManager *defaultManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        baseClient = [[self alloc] init];
-        baseClient.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
-
+        defaultManager = [[self alloc] init];
+        defaultManager.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
+        
         /**
          `AFJSONRequestSerializer` is a subclass of `AFHTTPRequestSerializer` that encodes parameters as JSON using `NSJSONSerialization`, setting the `Content-Type` of the encoded request to `application/json`.
          */
-        baseClient.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-        baseClient.sessionManager.requestSerializer.timeoutInterval = 15;
-        baseClient.headers = @{@"secret": @"af2ab55f5cfe4c269a7b726e7f3fdef9"};
-        baseClient.requiredParameters = ^NSDictionary *{
+        defaultManager.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+        defaultManager.sessionManager.requestSerializer.timeoutInterval = 15;
+        defaultManager.headers = @{@"secret": @"af2ab55f5cfe4c269a7b726e7f3fdef9"};
+        defaultManager.requiredParameters = ^NSDictionary *{
             return @{@"token": [HRUtils getToken]};
         };
     });
-    return baseClient;
+    return defaultManager;
 }
 
-+ (instancetype)otherClient{
++ (instancetype)otherManager{
+    static HRManager *otherManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        otherClient = [[self alloc] init];
-        otherClient.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:otherUrl]];
-        otherClient.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-        otherClient.sessionManager.requestSerializer.timeoutInterval = 15;
-        otherClient.headers = @{@"secret": @"1d2ab55f5cfe4c269a7b726e7f3fdef9"};
-        otherClient.requiredParameters = ^NSDictionary *{
+        otherManager = [[self alloc] init];
+        otherManager.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:otherUrl]];
+        otherManager.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+        otherManager.sessionManager.requestSerializer.timeoutInterval = 15;
+        otherManager.headers = @{@"secret": @"1d2ab55f5cfe4c269a7b726e7f3fdef9"};
+        otherManager.requiredParameters = ^NSDictionary *{
             return @{@"other": @"something"};
         };
     });
-    return otherClient;
+    return otherManager;
 }
 
 #pragma mark -
@@ -76,7 +74,7 @@ static HRClient *otherClient = nil;
 }
 
 - (NSString *)baseURLString{
-//    Also important to note is that a trailing slash will be added to any `baseURL` without one. This would otherwise cause unexpected behavior when constructing URLs using paths without a leading slash.
+    //    Also important to note is that a trailing slash will be added to any `baseURL` without one. This would otherwise cause unexpected behavior when constructing URLs using paths without a leading slash.
     return _sessionManager.baseURL.absoluteString;
 }
 
@@ -88,11 +86,11 @@ static HRClient *otherClient = nil;
      "code": 10000,
      "msg": "login success"
      "data":{
-            "Name": "",
-            "Token": "b1da5ca7-fd61-4537-9361-92163d9e43d8",
-            }
+     "Name": "",
+     "Token": "b1da5ca7-fd61-4537-9361-92163d9e43d8",
      }
-    */
+     }
+     */
     
     
     /**
@@ -120,7 +118,7 @@ static HRClient *otherClient = nil;
     };
     
     /*
-     error: 
+     error:
      Error Domain=NSURLErrorDomain Code=-1009 "The Internet connection appears to be offline."
      UserInfo = {
      NSUnderlyingError=0x7fa5f9f21520 {Error Domain=kCFErrorDomainCFNetwork Code=-1009 "(null)" UserInfo={_kCFStreamErrorCodeKey=50, _kCFStreamErrorDomainKey=1}},

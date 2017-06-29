@@ -1,14 +1,14 @@
 //
-//  HRClient+GirlFriend.h
+//  HRManager+Girlfriend.h
 //  HttpRequestClient
 //
-//  Created by 张雁军 on 15/06/2017.
+//  Created by 张雁军 on 29/06/2017.
 //  Copyright © 2017 张雁军. All rights reserved.
 //
 
-#import "HRClient.h"
+#import "HRManager.h"
 
-@interface HRClient (GirlFriend)
+@interface HRManager (Girlfriend)
 #define getGirlFriendsApi @"/api/user/getGirlFriends"
 - (void)getGirlFriendsWithParameters:(NSDictionary *)paras success:(void (^)(id data))success failure:(void (^)(HRError *error))failure;
 #define uploadImageApi @"/api/user/uploadImage"

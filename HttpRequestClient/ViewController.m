@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "HRGirlFriendsController.h"
+#import "HRGirlfriendsController.h"
 
 @interface ViewController ()
 
@@ -23,7 +23,7 @@
 }
 
 - (IBAction)showGirlFriends:(id)sender {
-    HRGirlFriendsController *vc = [[HRGirlFriendsController alloc] init];
+    HRGirlfriendsController *vc = [[HRGirlfriendsController alloc] init];
     vc.userId = @"666";
     [self.navigationController pushViewController:vc animated:YES];
 }

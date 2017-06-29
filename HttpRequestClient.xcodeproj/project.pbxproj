@@ -17,20 +17,16 @@
 		1018060A1EF176B200F7D79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101806081EF176B200F7D79B /* Main.storyboard */; };
 		1018060C1EF176B200F7D79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1018060B1EF176B200F7D79B /* Assets.xcassets */; };
 		1018060F1EF176B200F7D79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1018060D1EF176B200F7D79B /* LaunchScreen.storyboard */; };
-		101806181EF1799600F7D79B /* HRClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806171EF1799600F7D79B /* HRClient.m */; };
 		101806221EF19BF300F7D79B /* HRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806211EF19BF300F7D79B /* HRModel.m */; };
 		101806251EF19DD200F7D79B /* HRResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806241EF19DD200F7D79B /* HRResponse.m */; };
 		101806281EF19F0200F7D79B /* HRError.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806271EF19F0200F7D79B /* HRError.m */; };
-		101806391EF2312B00F7D79B /* HRClient+Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806381EF2312B00F7D79B /* HRClient+Friends.m */; };
-		1018063C1EF231DF00F7D79B /* HRFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018063B1EF231DF00F7D79B /* HRFriendModel.m */; };
-		1018063F1EF231F300F7D79B /* HRFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018063E1EF231F300F7D79B /* HRFriendsController.m */; };
-		101806421EF2320D00F7D79B /* HRFriendsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806411EF2320D00F7D79B /* HRFriendsManager.m */; };
-		101806581EF2BAE700F7D79B /* HRGirlFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806571EF2BAE700F7D79B /* HRGirlFriendsController.m */; };
-		1018065B1EF2BAF900F7D79B /* HRGirlFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018065A1EF2BAF900F7D79B /* HRGirlFriendModel.m */; };
-		1018065E1EF2BB0E00F7D79B /* HRClient+GirlFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018065D1EF2BB0E00F7D79B /* HRClient+GirlFriend.m */; };
-		101806611EF2BB2200F7D79B /* HRGirlFriendsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806601EF2BB2200F7D79B /* HRGirlFriendsManager.m */; };
+		101806581EF2BAE700F7D79B /* HRGirlfriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806571EF2BAE700F7D79B /* HRGirlfriendsController.m */; };
+		101806611EF2BB2200F7D79B /* HRGirlfriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 101806601EF2BB2200F7D79B /* HRGirlfriendManager.m */; };
+		102CE29C1F05401800F56B84 /* HRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 102CE29B1F05401800F56B84 /* HRManager.m */; };
+		102CE2A31F05495000F56B84 /* HRManager+Girlfriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 102CE2A21F05495000F56B84 /* HRManager+Girlfriend.m */; };
+		102CE2A61F054A8A00F56B84 /* HRGirlfriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 102CE2A51F054A8A00F56B84 /* HRGirlfriend.m */; };
 		10902BD71EFB9141008C2816 /* girl0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10902BD61EFB9141008C2816 /* girl0.jpg */; };
-		10902BDE1EFBA0E5008C2816 /* HRGirlFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10902BDD1EFBA0E5008C2816 /* HRGirlFriendCell.m */; };
+		10902BDE1EFBA0E5008C2816 /* HRGirlfriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10902BDD1EFBA0E5008C2816 /* HRGirlfriendCell.m */; };
 		B9DBE0B76605551E177CB120 /* libPods-HttpRequestClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CAB11808D34A851BEF7482E /* libPods-HttpRequestClient.a */; };
 /* End PBXBuildFile section */
 
@@ -53,32 +49,25 @@
 		1018060E1EF176B200F7D79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101806101EF176B200F7D79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101806161EF1799600F7D79B /* HRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRClient.h; sourceTree = "<group>"; };
-		101806171EF1799600F7D79B /* HRClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRClient.m; sourceTree = "<group>"; };
 		101806201EF19BF300F7D79B /* HRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRModel.h; sourceTree = "<group>"; };
 		101806211EF19BF300F7D79B /* HRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRModel.m; sourceTree = "<group>"; };
 		101806231EF19DD200F7D79B /* HRResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRResponse.h; sourceTree = "<group>"; };
 		101806241EF19DD200F7D79B /* HRResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRResponse.m; sourceTree = "<group>"; };
 		101806261EF19F0200F7D79B /* HRError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRError.h; sourceTree = "<group>"; };
 		101806271EF19F0200F7D79B /* HRError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRError.m; sourceTree = "<group>"; };
-		101806371EF2312B00F7D79B /* HRClient+Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HRClient+Friends.h"; sourceTree = "<group>"; };
-		101806381EF2312B00F7D79B /* HRClient+Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HRClient+Friends.m"; sourceTree = "<group>"; };
-		1018063A1EF231DF00F7D79B /* HRFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFriendModel.h; sourceTree = "<group>"; };
-		1018063B1EF231DF00F7D79B /* HRFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFriendModel.m; sourceTree = "<group>"; };
-		1018063D1EF231F300F7D79B /* HRFriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFriendsController.h; sourceTree = "<group>"; };
-		1018063E1EF231F300F7D79B /* HRFriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFriendsController.m; sourceTree = "<group>"; };
-		101806401EF2320D00F7D79B /* HRFriendsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFriendsManager.h; sourceTree = "<group>"; };
-		101806411EF2320D00F7D79B /* HRFriendsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFriendsManager.m; sourceTree = "<group>"; };
-		101806561EF2BAE700F7D79B /* HRGirlFriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlFriendsController.h; sourceTree = "<group>"; };
-		101806571EF2BAE700F7D79B /* HRGirlFriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlFriendsController.m; sourceTree = "<group>"; };
-		101806591EF2BAF900F7D79B /* HRGirlFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlFriendModel.h; sourceTree = "<group>"; };
-		1018065A1EF2BAF900F7D79B /* HRGirlFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlFriendModel.m; sourceTree = "<group>"; };
-		1018065C1EF2BB0E00F7D79B /* HRClient+GirlFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HRClient+GirlFriend.h"; sourceTree = "<group>"; };
-		1018065D1EF2BB0E00F7D79B /* HRClient+GirlFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HRClient+GirlFriend.m"; sourceTree = "<group>"; };
-		1018065F1EF2BB2200F7D79B /* HRGirlFriendsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlFriendsManager.h; sourceTree = "<group>"; };
-		101806601EF2BB2200F7D79B /* HRGirlFriendsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlFriendsManager.m; sourceTree = "<group>"; };
+		101806561EF2BAE700F7D79B /* HRGirlfriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlfriendsController.h; sourceTree = "<group>"; };
+		101806571EF2BAE700F7D79B /* HRGirlfriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlfriendsController.m; sourceTree = "<group>"; };
+		1018065F1EF2BB2200F7D79B /* HRGirlfriendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlfriendManager.h; sourceTree = "<group>"; };
+		101806601EF2BB2200F7D79B /* HRGirlfriendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlfriendManager.m; sourceTree = "<group>"; };
+		102CE29A1F05401800F56B84 /* HRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRManager.h; sourceTree = "<group>"; };
+		102CE29B1F05401800F56B84 /* HRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRManager.m; sourceTree = "<group>"; };
+		102CE2A11F05495000F56B84 /* HRManager+Girlfriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HRManager+Girlfriend.h"; sourceTree = "<group>"; };
+		102CE2A21F05495000F56B84 /* HRManager+Girlfriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HRManager+Girlfriend.m"; sourceTree = "<group>"; };
+		102CE2A41F054A8A00F56B84 /* HRGirlfriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlfriend.h; sourceTree = "<group>"; };
+		102CE2A51F054A8A00F56B84 /* HRGirlfriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlfriend.m; sourceTree = "<group>"; };
 		10902BD61EFB9141008C2816 /* girl0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl0.jpg; sourceTree = "<group>"; };
-		10902BDC1EFBA0E5008C2816 /* HRGirlFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlFriendCell.h; sourceTree = "<group>"; };
-		10902BDD1EFBA0E5008C2816 /* HRGirlFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlFriendCell.m; sourceTree = "<group>"; };
+		10902BDC1EFBA0E5008C2816 /* HRGirlfriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRGirlfriendCell.h; sourceTree = "<group>"; };
+		10902BDD1EFBA0E5008C2816 /* HRGirlfriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRGirlfriendCell.m; sourceTree = "<group>"; };
 		3D0937C4216B9C3C2A5E79CE /* Pods-HttpRequestClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpRequestClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-HttpRequestClient/Pods-HttpRequestClient.release.xcconfig"; sourceTree = "<group>"; };
 		5CAB11808D34A851BEF7482E /* libPods-HttpRequestClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HttpRequestClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA67546F544D5763F7DAB28E /* Pods-HttpRequestClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HttpRequestClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HttpRequestClient/Pods-HttpRequestClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +95,8 @@
 				1017D6021EF7B37800A0C356 /* UIAlertController_ hierarchy.png */,
 				1017D6041EF7B54000A0C356 /* HRUtils.h */,
 				1017D6051EF7B54000A0C356 /* HRUtils.m */,
+				101806231EF19DD200F7D79B /* HRResponse.h */,
+				101806241EF19DD200F7D79B /* HRResponse.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -137,7 +128,7 @@
 				101806061EF176B200F7D79B /* ViewController.m */,
 				1017D5FE1EF7A6D700A0C356 /* Utils */,
 				101806441EF2468000F7D79B /* Core */,
-				101806431EF2466700F7D79B /* Demo */,
+				101806621EF2CA3500F7D79B /* Girlfriend */,
 				101806081EF176B200F7D79B /* Main.storyboard */,
 				1018060B1EF176B200F7D79B /* Assets.xcassets */,
 				1018060D1EF176B200F7D79B /* LaunchScreen.storyboard */,
@@ -155,25 +146,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		101806431EF2466700F7D79B /* Demo */ = {
-			isa = PBXGroup;
-			children = (
-				10902BD61EFB9141008C2816 /* girl0.jpg */,
-				101806621EF2CA3500F7D79B /* Girlfriends */,
-				101806631EF2CA7900F7D79B /* Friends */,
-			);
-			name = Demo;
-			sourceTree = "<group>";
-		};
 		101806441EF2468000F7D79B /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				101806161EF1799600F7D79B /* HRClient.h */,
-				101806171EF1799600F7D79B /* HRClient.m */,
+				102CE29A1F05401800F56B84 /* HRManager.h */,
+				102CE29B1F05401800F56B84 /* HRManager.m */,
 				101806201EF19BF300F7D79B /* HRModel.h */,
 				101806211EF19BF300F7D79B /* HRModel.m */,
-				101806231EF19DD200F7D79B /* HRResponse.h */,
-				101806241EF19DD200F7D79B /* HRResponse.m */,
 				101806261EF19F0200F7D79B /* HRError.h */,
 				101806271EF19F0200F7D79B /* HRError.m */,
 			);
@@ -183,8 +163,8 @@
 		101806531EF2769C00F7D79B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				101806591EF2BAF900F7D79B /* HRGirlFriendModel.h */,
-				1018065A1EF2BAF900F7D79B /* HRGirlFriendModel.m */,
+				102CE2A41F054A8A00F56B84 /* HRGirlfriend.h */,
+				102CE2A51F054A8A00F56B84 /* HRGirlfriend.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -192,10 +172,10 @@
 		101806541EF27EB300F7D79B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				101806561EF2BAE700F7D79B /* HRGirlFriendsController.h */,
-				101806571EF2BAE700F7D79B /* HRGirlFriendsController.m */,
-				10902BDC1EFBA0E5008C2816 /* HRGirlFriendCell.h */,
-				10902BDD1EFBA0E5008C2816 /* HRGirlFriendCell.m */,
+				101806561EF2BAE700F7D79B /* HRGirlfriendsController.h */,
+				101806571EF2BAE700F7D79B /* HRGirlfriendsController.m */,
+				10902BDC1EFBA0E5008C2816 /* HRGirlfriendCell.h */,
+				10902BDD1EFBA0E5008C2816 /* HRGirlfriendCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -203,67 +183,29 @@
 		101806551EF27EC400F7D79B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1018065F1EF2BB2200F7D79B /* HRGirlFriendsManager.h */,
-				101806601EF2BB2200F7D79B /* HRGirlFriendsManager.m */,
+				1018065F1EF2BB2200F7D79B /* HRGirlfriendManager.h */,
+				101806601EF2BB2200F7D79B /* HRGirlfriendManager.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
-		101806621EF2CA3500F7D79B /* Girlfriends */ = {
+		101806621EF2CA3500F7D79B /* Girlfriend */ = {
 			isa = PBXGroup;
 			children = (
+				10902BD61EFB9141008C2816 /* girl0.jpg */,
 				10E0F1A41EF5305800AFBF72 /* Utils */,
 				101806531EF2769C00F7D79B /* Model */,
 				101806541EF27EB300F7D79B /* View */,
 				101806551EF27EC400F7D79B /* ViewModel */,
 			);
-			name = Girlfriends;
-			sourceTree = "<group>";
-		};
-		101806631EF2CA7900F7D79B /* Friends */ = {
-			isa = PBXGroup;
-			children = (
-				101806641EF2CA9900F7D79B /* Model */,
-				101806651EF2CAA200F7D79B /* View */,
-				101806661EF2CAAB00F7D79B /* ViewModel */,
-			);
-			name = Friends;
-			sourceTree = "<group>";
-		};
-		101806641EF2CA9900F7D79B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1018063A1EF231DF00F7D79B /* HRFriendModel.h */,
-				1018063B1EF231DF00F7D79B /* HRFriendModel.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		101806651EF2CAA200F7D79B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1018063D1EF231F300F7D79B /* HRFriendsController.h */,
-				1018063E1EF231F300F7D79B /* HRFriendsController.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		101806661EF2CAAB00F7D79B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				101806371EF2312B00F7D79B /* HRClient+Friends.h */,
-				101806381EF2312B00F7D79B /* HRClient+Friends.m */,
-				101806401EF2320D00F7D79B /* HRFriendsManager.h */,
-				101806411EF2320D00F7D79B /* HRFriendsManager.m */,
-			);
-			name = ViewModel;
+			name = Girlfriend;
 			sourceTree = "<group>";
 		};
 		10E0F1A41EF5305800AFBF72 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				1018065C1EF2BB0E00F7D79B /* HRClient+GirlFriend.h */,
-				1018065D1EF2BB0E00F7D79B /* HRClient+GirlFriend.m */,
+				102CE2A11F05495000F56B84 /* HRManager+Girlfriend.h */,
+				102CE2A21F05495000F56B84 /* HRManager+Girlfriend.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -412,23 +354,19 @@
 			files = (
 				101806281EF19F0200F7D79B /* HRError.m in Sources */,
 				1017D5FD1EF7A5F500A0C356 /* UIAlertView+Handler.m in Sources */,
-				1018065E1EF2BB0E00F7D79B /* HRClient+GirlFriend.m in Sources */,
 				1017D6061EF7B54000A0C356 /* HRUtils.m in Sources */,
-				101806421EF2320D00F7D79B /* HRFriendsManager.m in Sources */,
-				1018063C1EF231DF00F7D79B /* HRFriendModel.m in Sources */,
+				102CE2A31F05495000F56B84 /* HRManager+Girlfriend.m in Sources */,
 				101806071EF176B200F7D79B /* ViewController.m in Sources */,
 				101806251EF19DD200F7D79B /* HRResponse.m in Sources */,
-				101806391EF2312B00F7D79B /* HRClient+Friends.m in Sources */,
 				101806041EF176B200F7D79B /* AppDelegate.m in Sources */,
 				1017D6011EF7AEA600A0C356 /* UIAlertController+Helper.m in Sources */,
+				102CE29C1F05401800F56B84 /* HRManager.m in Sources */,
+				102CE2A61F054A8A00F56B84 /* HRGirlfriend.m in Sources */,
 				101806221EF19BF300F7D79B /* HRModel.m in Sources */,
-				10902BDE1EFBA0E5008C2816 /* HRGirlFriendCell.m in Sources */,
-				101806181EF1799600F7D79B /* HRClient.m in Sources */,
+				10902BDE1EFBA0E5008C2816 /* HRGirlfriendCell.m in Sources */,
 				101806011EF176B200F7D79B /* main.m in Sources */,
-				1018063F1EF231F300F7D79B /* HRFriendsController.m in Sources */,
-				1018065B1EF2BAF900F7D79B /* HRGirlFriendModel.m in Sources */,
-				101806611EF2BB2200F7D79B /* HRGirlFriendsManager.m in Sources */,
-				101806581EF2BAE700F7D79B /* HRGirlFriendsController.m in Sources */,
+				101806611EF2BB2200F7D79B /* HRGirlfriendManager.m in Sources */,
+				101806581EF2BAE700F7D79B /* HRGirlfriendsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
