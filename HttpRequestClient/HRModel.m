@@ -28,9 +28,9 @@
 
 + (instancetype)modelWithURLString:(NSString *)string method:(HttpRequestMethod)method parameters:(NSDictionary *)parameters constructingBody:(ConstructingBody)constructingBody progress:(Progress)progress timeoutInterval:(NSTimeInterval)timeoutInterval{
     HRModel *hrm = [[self alloc] init];
-    [hrm setValue:string forKey:@"URLString"];
+    [hrm setValue:string.copy forKey:@"URLString"];
     [hrm setValue:@(method) forKey:@"method"];
-    [hrm setValue:parameters forKey:@"parameters"];
+    [hrm setValue:parameters.copy forKey:@"parameters"];
     [hrm setValue:constructingBody forKey:@"constructingBody"];
     [hrm setValue:progress forKey:@"progress"];
     if (timeoutInterval <= 0) {

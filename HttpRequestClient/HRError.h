@@ -10,6 +10,6 @@
 
 @interface HRError : MTLModel <MTLJSONSerializing>
 - (instancetype)initWithCode:(NSInteger)code message:(NSString *)message;
-@property (readonly) NSInteger code;
-@property (nonatomic, copy, readonly) NSString *message;
+@property (nonatomic, readonly) NSInteger code;
+@property (nonatomic, readonly) NSString *message;
 @end
