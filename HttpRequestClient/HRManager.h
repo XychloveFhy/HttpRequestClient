@@ -23,13 +23,13 @@
  */
 - (void)setHeaders:(NSDictionary<NSString *,NSString *> *)headers;
 
-/**
- start a url session request
- 
- @param model which contain parameters for the request
- @param success <#success description#>
- @param failure <#failure description#>
- @return <#return value description#>
- */
+//...
+
+- (NSURLSessionDataTask *)requestWithModel:(HRModel *)model;
+
 - (NSURLSessionDataTask *)requestWithModel:(HRModel *)model success:(void (^)(NSURLSessionDataTask *task, id data))success failure:(void (^)(NSURLSessionDataTask *task, HRError *error))failure;
+
+- (NSURLSessionDataTask *)requestWithModel:(HRModel *)model constructingBody:(void (^)(id <AFMultipartFormData> formData))constructingBody progress:(void(^)(NSProgress *progress))progress success:(void (^)(NSURLSessionDataTask *task, id data))success failure:(void (^)(NSURLSessionDataTask *task, HRError *error))failure;
+
+- (NSURLSessionDataTask *)requestWithURL:(NSString *)string method:(HttpRequestMethod)method parameters:(NSDictionary *)parameters timeoutInterval:(NSTimeInterval)timeoutInterval constructingBody:(void (^)(id <AFMultipartFormData> formData))constructingBody progress:(void(^)(NSProgress *progress))progress success:(void (^)(NSURLSessionDataTask *task, id data))success failure:(void (^)(NSURLSessionDataTask *task, HRError *error))failure;
 @end

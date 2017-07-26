@@ -78,6 +78,12 @@
     return _sessionManager.baseURL.absoluteString;
 }
 
+#pragma mark - 
+
+- (NSURLSessionDataTask *)requestWithModel:(HRModel *)model{
+    return [self requestWithURL:model.URLString method:model.method parameters:model.parameters timeoutInterval:model.timeoutInterval constructingBody:model.constructingBody progress:model.progress success:model.success failure:model.failure];
+}
+
 - (NSURLSessionDataTask *)requestWithModel:(HRModel *)model success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask *, HRError *))failure{
     
     /*
