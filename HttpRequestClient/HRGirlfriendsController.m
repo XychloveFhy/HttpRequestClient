@@ -92,6 +92,7 @@ static NSString * const identifier = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HRGirlfriendCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    //not very vm, just for example
     HRGirlfriend *model = _manager.girlfriends[indexPath.row];
     NSString *string = [NSString stringWithFormat:@"Name:%@  Age:%ld  B/W/H:%@", model.name, model.age, model.sanwei];
     cell.detailTextLabel.text = string;
