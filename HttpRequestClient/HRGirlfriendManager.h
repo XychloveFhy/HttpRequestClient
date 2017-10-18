@@ -14,8 +14,11 @@
 - (instancetype)initWithUserId:(NSString *)userId;
 @property (nonatomic, readonly) NSString *userId;
 @property (nonatomic, readonly) NSArray <HRGirlfriend *> *girlfriends;
-- (void)getGirlFriendsWithSuccess:(void (^)())success failure:(void (^)(HRError *error))failure;
+- (NSURLSessionDataTask *)getGirlFriendsWithSuccess:(void (^)())success failure:(void (^)(HRError *error))failure;
 
 @property (nonatomic, strong) UIImage *girl;
-- (void)uploadGirlProgress:(Progress)progress success:(void (^)(NSDictionary *girl))success failure:(void (^)(HRError *error))failure;
+- (NSURLSessionDataTask *)uploadGirlProgress:(void(^)(NSProgress *progress))progress success:(void (^)(NSDictionary *girl))success failure:(void (^)(HRError *error))failure;
+
+- (void)fake:(void(^)())success failure:(void(^)())failure;
+
 @end

@@ -10,7 +10,7 @@
 
 @interface HRManager (Girlfriend)
 #define getGirlFriendsApi @"/api/user/getGirlFriends"
-- (void)getGirlFriendsWithParameters:(NSDictionary *)paras success:(void (^)(id data))success failure:(void (^)(HRError *error))failure;
+- (NSURLSessionDataTask *)getGirlFriendsWithParameters:(NSDictionary *)paras success:(void (^)(id data))success failure:(void (^)(HRError *error))failure;
 #define uploadImageApi @"/api/user/uploadImage"
-- (void)uploadImageWithParameters:(NSDictionary *)paras constructingBody:(ConstructingBody)constructingBody progress:(Progress)progress success:(void (^)(id data))success failure:(void (^)(HRError *error))failure;
+- (NSURLSessionDataTask *)uploadImageWithParameters:(NSDictionary *)paras constructingBody:(void(^)(id <AFMultipartFormData> formData))constructingBody progress:(void(^)(NSProgress *pro))progress success:(void (^)(id data))success failure:(void (^)(HRError *error))failure;
 @end

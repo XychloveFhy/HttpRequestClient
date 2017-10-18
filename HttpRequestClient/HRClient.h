@@ -8,11 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
-#import "HRModel.h"
+//#import "HRModel.h"
 #import "HRError.h"
 #import "HRUtils.h"
-
-#define defaultTimeoutInterval 15
 
 //debug
 //inhouse

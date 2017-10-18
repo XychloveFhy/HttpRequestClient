@@ -40,7 +40,7 @@
     [hrm setValue:[success copy] forKey:@"success"];
     [hrm setValue:[failure copy] forKey:@"failure"];
     if (timeoutInterval <= 0) {
-        [hrm setValue:@(defaultTimeoutInterval) forKey:@"timeoutInterval"];
+//        [hrm setValue:@(defaultTimeoutInterval) forKey:@"timeoutInterval"];
     }else{
         [hrm setValue:@(timeoutInterval) forKey:@"timeoutInterval"];
     }

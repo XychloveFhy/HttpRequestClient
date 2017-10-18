@@ -33,6 +33,12 @@ static NSString * const identifier = @"Cell";
     [self.tableView registerClass:[HRGirlfriendCell class] forCellReuseIdentifier:identifier];
     self.tableView.rowHeight = 90;
     _manager = [[HRGirlfriendManager alloc] initWithUserId:_userId];
+//    [_manager fake:^{
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"fake" message:nil delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+//        [alert show];
+//    } failure:^{
+//        
+//    }];
     [self getUserDetail];
 }
 
